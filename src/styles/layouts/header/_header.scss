@@ -1,0 +1,114 @@
+.header {
+    @include flex(sb, c, row);
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--color-white);
+    height: var(--header-height);
+    z-index: var(--z-header);
+    transition: .5s;
+    width: 100%;
+
+    
+    @include breakpoint-down(small) {
+        height: var(--header-height-mobile)
+    }
+
+    .wrapper {
+        padding: 0px 10px;
+
+        @include breakpoint-down(medium) {
+            padding: 0 20px;
+        }
+    }
+
+    .menu {
+        @include flex(i, i, row);
+        width: 100%;
+
+        @include breakpoint-down(small) {
+            @include flex(sb, i, row);
+        }
+
+        &__wrapper {
+            @include flex(i, i, row);
+            width: 100%;
+            transition: .5s;
+
+            @include breakpoint-down(small) {
+                @include flex(i, i, column);
+                
+
+                position: absolute;
+                left: -999px;
+                top: 75px;
+                height: 385px;
+                width: 90%;
+                z-index: -5;
+                background-color: var(--color-darkViolet);
+                border-radius: 10px;
+                padding: 40px 0;
+            }
+        }
+
+       &__wrapper--active{
+           left: 50%;
+                transform: translateX(-50%);
+       }
+
+        &__list {
+            @include flex(c, c, row);
+            height: inherit;
+
+            @include breakpoint-down(small) {
+                @include flex(sb, i, column);
+
+                height: auto;
+                border-bottom: 1px solid var(--color-opacity-backround);
+                margin: 0 20px;
+            }
+        }
+
+        &__logo {
+            @include flex(c, c, row);
+            margin-right: 30px;
+        }
+
+        &__login {
+            @include flex(fe, c, row);
+            flex-grow: 1;
+
+            @include breakpoint-down(small) {
+                @include flex(sb, i, column);
+                margin-top: 30px;
+            }
+        }
+
+        &__link {
+            color: var(--color-grayishViolet);
+            margin: 0 16px;
+            display: block;
+            transition: .3s;
+
+
+            @include breakpoint-down(small) {
+                color: var(--color-white);
+                margin-bottom: 40px;
+            }
+        }
+
+        &__link:hover {
+            color: var(--color-very-darkBlue);
+
+            @include breakpoint-down(small) {
+                color: var(--color-lightGray);
+            }
+        }
+    }
+
+    &--sticky {
+        height: var(--header-height-sticky);
+        box-shadow: 0px 1px 1px var(--color-lightGray)
+    }
+
+}

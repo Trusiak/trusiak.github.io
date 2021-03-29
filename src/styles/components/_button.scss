@@ -1,0 +1,70 @@
+.button{
+    transition: .3s;
+
+    &[disabled], &[disabled]:hover{
+        background-color: var(--color-very-darkBlue);
+        cursor: default;
+    } 
+    
+    &--empty{
+        color: var(--color-grayishViolet);
+        background: none;
+    }
+    &--empty:hover{
+        color: var(--color-very-darkBlue);
+    }
+    
+    &--welcome{
+        width: 200px;
+        height: 56px;
+        margin-top: 36px;
+        border-radius: 50px;
+    }
+
+    &--response{
+        width: 105px;
+        height: 40px;
+        border-radius: 7px;
+        margin: 0 24px;
+        justify-self: flex-end;
+
+        @include breakpoint-down(small){
+            width: 100%;
+        }
+    }
+
+    &--form {
+        margin-left: 23px;
+        height: 64px;
+        width: 190px;
+        border-radius: 10px;
+
+        @include breakpoint-down(small) {
+            width: 100%;
+            margin: 13px 0 0 0;
+            height: 48px;
+        }
+    }
+    &--full{
+        background-color: var(--color-cyan);
+        color: white;
+    }
+    &--full:hover{
+        background-color: var(--color-light-cyan);
+    }
+    &--register{
+        width: 105px;
+        height: 40px;
+        font-size: 15px;
+        margin-left: 40px;
+        border-radius: 50px;
+
+        @include breakpoint-down(small){
+            margin: 0;
+            width: 280px;
+            height: 50px;
+        }
+    }
+    
+}
+

@@ -1,0 +1,59 @@
+.welcome {
+    @include flex(sb, c, row);
+    position: relative;
+    margin-bottom: 160px;
+    padding-top: 25px;
+
+    @include breakpoint-down(small) {
+        @include flex(c, c, column-reverse);
+        margin-bottom: 170px;
+        padding-top: 0px;
+    }
+
+    .wrapper {
+        padding: 0 10px;
+        @include breakpoint-down(medium) {
+            padding: 0 20px;
+        }
+
+        @include breakpoint-down(small) {
+            padding: 0 30px;
+        }
+    }
+
+    &__svg {
+        @include flex(c, c, row);
+        position: relative;
+        width: 733px;
+        height: 482px;
+
+        @include breakpoint-down(medium) {
+            width: 100%;
+            height: auto;
+            min-width: 450px;
+            max-width: 600px;
+        }
+
+        @include breakpoint-down(small) {
+            min-height: 380px;
+            min-width: 500px;
+        }
+    }
+
+    &__article {
+        max-width: 565px;
+        @include breakpoint-down(small) {
+            text-align: center;
+        }
+    }
+
+    &__name {
+        color: var(--color-very-darkBlue);
+        margin-top: 5px;
+    }
+
+    &__text {
+        color: var(--color-grayishViolet);
+        margin-top: 10px;
+    }
+}

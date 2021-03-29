@@ -1,0 +1,26 @@
+.about {
+    background-color: var(--color-light-blue);
+    padding-bottom: 120px;
+
+    @include breakpoint-down(medium) {
+        .wrapper {
+            padding: 0 20px;
+        }
+    }
+
+    &__article {
+        @include flex(c, c, column);
+        padding-top: 15px;
+    }
+
+    &__title {
+        color: var(--color-very-darkBlue);
+    }
+
+    &__text {
+        color: var(--color-grayishViolet);
+        max-width: 510px;
+        text-align: center;
+        margin-top: 20px;
+    }
+}

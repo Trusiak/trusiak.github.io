@@ -1,0 +1,91 @@
+$breakpoints: (
+    "small": "875px",
+    "medium": "1130px",
+);
+
+// Flexbox values
+
+$justify-content: (
+    "fs": flex-start,
+    "fe": flex-end,
+    "c": center,
+    "sb": space-between,
+    "sa": space-around,
+    "se": space-evenly,
+    "ih": inherit
+);
+
+$align-items: (
+    "b": baseline,
+    "st": stretch,
+    "fs": flex-start,
+    "fe": flex-end,
+    "c": center,
+    "ih": inherit
+);
+
+// Flexbox Mixins
+
+@mixin breakpoint-down($size) {
+    @media screen and (max-width: map-get($map: $breakpoints, $key: $size)){
+        @content;
+    }
+}
+
+@mixin flex($jc, $ai, $direction) {
+    display: flex;
+    justify-content: map-get($map: $justify-content, $key: $jc);
+    align-items: map-get($map: $align-items, $key: $ai);
+    flex-direction: $direction;
+}
+
+// Fluid Typography
+
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+
+    @if $u1==$u2 and $u1==$u3 and $u1==$u4 {
+        & {
+            font-size: $min-font-size;
+
+            @media screen and (min-width: $min-vw) {
+                font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+            }
+
+            @media screen and (min-width: $max-vw) {
+                font-size: $max-font-size;
+            }
+        }
+    }
+}
+
+
+// Css min-max implementation 
+
+@function css-function( $function, $values... ) {
+	@return 
+		$function
+		+ unquote( '(' )
+		+ $values
+		+ unquote( ')' )
+	;
+}
+
+@function css-min( $values... ) {
+	@return css-function( min, $values );
+}
+
+@function css-max( $values... ) {
+	@return css-function( max, $values );
+}
+
+@function css-clamp( $values... ) {
+	@return css-function( clamp, $values );
+}

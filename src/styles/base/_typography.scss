@@ -1,0 +1,121 @@
+h1 {
+    @include fluid-type(375px, 1440px, 44px, 80px);
+
+    letter-spacing: -2px;
+    line-height: 1.12;
+}
+
+h2 {
+    @include fluid-type(375px, 1440px, 27px, 39px);
+
+    font-size: var(--fs-h2-max);
+}
+
+h3 {
+    @include fluid-type(375px, 1440px, 15px, 21px);
+
+    @include breakpoint-down(small) {
+        font-size: 21px;
+    }
+}
+
+h4 {
+    font-size: var(--fs-h4-max);
+}
+
+.menu {
+    &__link {
+        font-size: 16px;
+        font-weight: 700;
+
+        @include breakpoint-down(small) {
+            font-size: 18px;
+        }
+    }
+}
+
+.button {
+    font-weight: 700;
+    line-height: 1;
+    font-family: 'Poppins', sans-serif;
+
+    &--login {
+        font-size: 16px;
+
+        @include breakpoint-down(small) {
+            font-size: 18px;
+            color: var(--color-white);
+        }
+    }
+
+    &--welcome {
+        font-size: 20px;
+    }
+
+    &--response {
+        font-size: 15px;
+    }
+
+    &--form {
+        font-size: 20px;
+    }
+
+    &--boost {
+        font-size: 20px;
+    }
+}
+
+.welcome {
+    &__text {
+        @include fluid-type(375px, 1440px, 18px, 22px);
+        line-height: 1.6;
+    }
+}
+
+.response {
+    &__input-link {
+        @include fluid-type(375px, 1440px, 16px, 20px);
+    }
+
+    &__output-link {
+        @include fluid-type(375px, 1440px, 16px, 20px);
+    }
+
+    &__error {
+        @include fluid-type(375px, 1440px, 16px, 20px);
+    }
+}
+
+.form {
+    &__error {
+        font-size: 15px;
+    }
+}
+
+.about {
+    &__text {
+        @include fluid-type(375px, 1440px, 16px, 18px);
+        line-height: 1.55;
+    }
+}
+
+.feature {
+    &__text {
+        @include fluid-type(375px, 1440px, 10px, 16px);
+        line-height: 1.55;
+
+        @include breakpoint-down(small) {
+            font-size: 16px;
+        }
+    }
+}
+
+.footer {
+    &__link {
+        font-size: 14px;
+
+        @include breakpoint-down(small) {
+            font-size: 16px;
+        }
+    }
+}

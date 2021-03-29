@@ -1,0 +1,27 @@
+.boost{
+    @include flex(c, c, column);
+    position: relative;
+    height: 250px;
+    width: 100%;
+    background-color: var(--color-darkViolet);
+    color: var(--color-white);
+    z-index: 1;
+
+    &:after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-image: url(./../images/bg-boost-desktop.svg);
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+.button--boost{
+    border-radius: 50px;
+    margin-top: 20px;
+    padding: 18px 40px;
+}
+

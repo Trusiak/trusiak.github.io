@@ -1,0 +1,100 @@
+.logo--footer {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(55deg) brightness(163%) contrast(163%);
+}
+
+.footer {
+    height: 310px;
+    background-color: var(--color-very-darkViolet);
+    width: 100%;
+
+    @include breakpoint-down(small) {
+        height: 100%;
+        text-align: center;
+    }
+
+    .wrapper{
+        padding: 0 2rem;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas:
+            "fl . fn1 fn2 fn3 fn4 fs fs";
+        padding-top: 70px;
+
+        @include breakpoint-down(small) {
+            @include flex(c, c, column)
+        }
+    }
+
+    &__logo {
+        grid-area: fl;
+    }
+
+    &__nav {
+        margin: 0 40px;
+        min-width: 110px;
+
+        @include breakpoint-down(small) {
+            margin-top: 45px;
+        }
+    }
+
+    &__nav:nth-child(1) {
+        grid-area: fn1;
+    }
+
+    &__nav:nth-child(2) {
+        grid-area: fn2;
+    }
+
+    &__nav:nth-child(3) {
+        grid-area: fn3;
+    }
+
+    &__nav:nth-child(4) {
+        grid-area: fn4;
+    }
+
+    &__social-medias {
+        @include flex(c, fs, row);
+
+        grid-area: fs;
+
+        @include breakpoint-down(medium) {
+            @include flex(sb, fs, column);
+        }
+
+        @include breakpoint-down(small) {
+            @include flex(sb, fs, row);
+            margin: 45px 0;
+        }
+    }
+
+    &__social-icon{
+        &:hover{
+            filter: invert(0.11) sepia(0.5) saturate(11.3) hue-rotate(140.4deg) brightness(0.84);
+        }
+    }
+
+    &__social-media {
+        margin: 0 12px;
+    }
+
+    &__title {
+        color: var(--color-white);
+        margin-bottom: 25px;
+    }
+
+    &__link {
+        display: block;
+        color: var(--color-gray);
+        padding: 7px 0;
+
+        &:hover{
+            color: var(--color-cyan);
+        }
+    }
+
+}

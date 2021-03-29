@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Shortly</title>
+  <meta name="description" content="Web application for shortening links. Cut your URL Adress by one click.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <html lang="en-EN"></html>
+</head>
+
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <nav class="menu">
+        <a class="menu__logo" href="/index.html">
+          <img src="assets/images/logo.svg" alt="Shortly Logo">
+        </a>
+        <div class="menu__wrapper">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link">Features</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Pricing</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Resources</a>
+            </li>
+          </ul>
+          <div class="menu__login">
+            <button class="button button--empty button--login ">Login</button>
+            <button class="button button--full button--register">Sign Up</button>
+          </div>
+        </div>
+        <div class="hamburger">
+          <button class="hamburger__button" aria-label="Main Menu">
+            <svg width="40" height="40" viewBox="0 0 100 100">
+              <path class="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path class="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <section class="welcome">
+      <div class="wrapper">
+        <article class="welcome__article">
+          <h1 class="welcome__name">More than just shorter links</h1>
+          <p class="welcome__text">Build your brand’s recognition and get detailed insights
+            on how your links are performing.</p>
+          <button class="button button--full button--welcome button--started">Get started</button>
+        </article>
+
+        <div class="welcome__svg">
+          <img id="svg-inject-target" src="assets/images/man-animation.svg">
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="wrapper">
+        <form class="form">
+          <input type="url" title="Place link here" placeholder="Shorten a link here..." data-error-text="Fill this field" class="form__input">
+          <button class="button--form button--full button" type="submit">Shorten it!</button>
+          <span class="form__error">Please add a link</span>
+        </form>
+        <div class="response-wrapper">
+        </div>
+        <article class="about__article">
+          <h2 class="about__title">Advanced Statistics</h2>
+          <p class="about__text">Track how your links are performing across the web with our
+            advanced statistics dashboard.</p>
+          <ul class="feature">
+            <li class="feature__item" role="article">
+              <div class="feature__img">
+                <img src="assets/images/icon-brand-recognition.svg" alt="shortly brand feature icon" class="about__img">
+              </div>
+              <h3 class="feature__title">Brand Recognition</h3>
+              <p class="feature__text">Boost your brand recognition with each click. Generic links don’t mean a thing.
+                Branded links help instil confidence in your content.</p>
+            </li>
+            <li class="feature__item" role="article">
+              <div class="feature__img">
+                <img src="assets/images/icon-detailed-records.svg" alt="shortly detailed feature icon" class="about__img">
+              </div>
+              <h3 class="feature__title">Detailed Records</h3>
+              <p class="feature__text">Gain insights into who is clicking your links. Knowing when and where people
+                engage with your content helps inform better decisions.</p>
+            </li>
+            <li class="feature__item" role="article">
+              <div class="feature__img">
+                <img src="assets/images/icon-fully-customizable.svg" alt="shortly customizable feature icon" class="about__img">
+              </div>
+              <h3 class="feature__title">Fully Customizable</h3>
+              <p class="feature__text">Improve brand awareness and content discoverability through customizable links,
+                supercharging audience engagement.</p>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <section class="boost">
+      <div class="wrapper">
+        <h2 class="boost__title">Boost your link today</h2>
+        <button class="button button--full button--boost button--started">Get started</button>
+      </div>
+    </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__content">
+        <a class="footer__logo" href="/index.html">
+          <img src="assets/images/logo.svg" class="logo--footer" alt="Shortly Logo">
+        </a>
+        <nav class="footer__nav">
+          <h4 class="footer__title">Features</h4>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">Link Shortening</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Branded Links</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Analytics</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="footer__nav">
+          <h4 class="footer__title">Resources</h4>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">Blog</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Developers</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Support</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="footer__nav">
+          <h4 class="footer__title">Company</h4>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">About</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Our Team</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Careers</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__social-medias">
+          <a href="#" class="footer__social-media">
+            <img src="assets/images/icon-facebook.svg" alt="icon facebook shortly" class="footer__social-icon">
+          </a>
+          <a href="#" class="footer__social-media">
+            <img src="assets/images/icon-twitter.svg" alt="icon twitter shortly" class="footer__social-icon">
+          </a>
+          <a href="#" class="footer__social-media">
+            <img src="assets/images/icon-pinterest.svg" alt="icon pinterest shortly" class="footer__social-icon">
+          </a>
+          <a href="#" class="footer__social-media">
+            <img src="assets/images/icon-instagram.svg" alt="icon instagram shortly" class="footer__social-icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

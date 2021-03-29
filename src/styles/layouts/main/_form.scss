@@ -1,0 +1,68 @@
+.form {
+    @include flex(c, c, row);
+    position: relative;
+    top: -84px;
+    border-radius: 10px;
+    width: 100%;
+    height: 168px;
+    background-color: var(--color-darkViolet);
+    z-index: var(--z-api);
+    overflow: hidden;
+    margin-bottom: 24px;
+    padding: 0 40px;
+
+
+    @include breakpoint-down(small) {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    &__input {
+        height: 64px;
+        width: 737px;
+        padding-left: 33px;
+        border-radius: inherit;
+        @include breakpoint-down(small) {
+            width: 100%;
+            height: 48px;
+            padding-left: 13px;
+        }
+    }
+
+    &__input:invalid {
+        border: 3px solid var(--color-red);
+        outline: none;
+        box-shadow: none;
+    }
+
+    &__input:focus {
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
+
+    &__error {
+        position: absolute;
+        left: 80px;
+        top: 125px;
+        color: var(--color-red);
+        font-style: italic;
+        display: none;
+        @include breakpoint-down(small) {
+            left: 25px;
+            top: 8px;
+            font-size: 12px;
+        }
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(./../images/bg-shorten-desktop.svg);
+        width: 100%;
+        height: 100%;
+        z-index: var(--z-pseudo);
+    }
+}

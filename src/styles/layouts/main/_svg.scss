@@ -1,0 +1,17 @@
+.svg{
+    position: absolute;
+    width: 733px;
+    height: 482px; 
+    left: css-min( #{ 7vw }, #{ 120px } );
+
+    @include breakpoint-down(medium) {
+        position: relative;
+        width: 100%;
+        height: auto;
+        left: 0;
+    }
+    @include breakpoint-down(small) {
+        left: 85px;
+        padding-bottom: 50px;
+    }
+}
